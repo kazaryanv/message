@@ -28,4 +28,12 @@ class LinkGenerateController extends Controller
         return view('show', compact('links'));
     }
 
+    public function destroy($id){
+        $links = LinkGenerate::destroy($id);
+        if ($links)
+        return redirect()->route('show_id')->with("success",'your message is dellete');
+        else{
+            return redirect()->route('show_id')->with('fail','fail');
+        }
+    }
 }

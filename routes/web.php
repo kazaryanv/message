@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/create',[LinkGenerateController::class,'create'])->name('create');
 Route::get('/',[LinkGenerateController::class,'index'])->name('SmsLinks');
 Route::get('/show',[LinkGenerateController::class,'show'])->name('show_id');
+Route::get('/delete/{id}',[LinkGenerateController::class,'destroy'])->name('destroy');
