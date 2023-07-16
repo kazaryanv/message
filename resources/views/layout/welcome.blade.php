@@ -50,7 +50,7 @@
             </div>
         </div>
     </header>
-    <div style="height: 765px;">
+    <div style="min-height: 765px;height: auto;">
         @yield('content')
     </div>
     <footer>
@@ -66,19 +66,19 @@
            <div>
                <div style="display: flex;align-items: center;justify-content: space-between;margin-left: 110px;margin-right: 110px;">
                    <div>
-                       <a href="#"><h1 class="font">Write a New Memo</h1></a>
+                       <h1 style="cursor: default" class="font">Write a New Memo</h1>
                        <a href="#"><p class="font">A Comment</p></a>
                    </div>
                    <div>
-                       <a href="#"><h1 class="font">Confidentiality</h1></a>
+                       <h1 style="cursor: default" class="font">Confidentiality</h1>
                        <a href="#"><p class="font">Support</p></a>
                    </div>
                    <div>
-                       <a href="#"><h1 class="font">Blog</h1></a>
+                       <h1 style="cursor: default" class="font">Blog</h1>
                        <a href="#"><p class="font">About Us</p></a>
                    </div>
                    <div>
-                       <a href="#"><h1 class="font">Social Media</h1></a>
+                       <h1 style="cursor: default" class="font">Social Media</h1>
                        <div>
                            <div style="display: flex;align-items: center;justify-content: space-evenly;">
                                <a href="#"><img src="../../image/FaceBook.png" alt=""></a>

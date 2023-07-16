@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\LinkGenerateController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/show', function () {
 //    return view('show');
 //});
-
-Route::get('/create',[LinkGenerateController::class,'create'])->name('create');
 Route::get('/',[LinkGenerateController::class,'index'])->name('SmsLinks');
-Route::get('/show',[LinkGenerateController::class,'show'])->name('show_id');
+Route::get('/create',[LinkGenerateController::class,'create'])->name('create');
+Route::get('/show/',[LinkGenerateController::class,'show_link'])->name('show_link');
 Route::get('/delete/{id}',[LinkGenerateController::class,'destroy'])->name('destroy');
+Route::get('/show/message/{id}',[LinkGenerateController::class,'show_message'])->middleware('auth')->name('show_massage');
+
+Route::get('/login',[LinkGenerateController::class,'login'])->name('login');
+Route::post('/login/store',[LinkGenerateController::class,'login_store'])->name('login_store');

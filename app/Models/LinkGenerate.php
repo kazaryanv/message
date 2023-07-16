@@ -10,7 +10,12 @@ class LinkGenerate extends Model
     use HasFactory;
     protected $fillable = [
         'content',
+        'reading',
+        'email',
+        'password',
+        'link_name',
         'created_at',
         'updated_at',
     ];
+
 }
