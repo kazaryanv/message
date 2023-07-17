@@ -41,18 +41,33 @@
     height: auto;">
             <div style="width: 100%;height: auto;display: flex;align-items: center;justify-content: space-between;margin-bottom: 20px;">
                 <h1 class="memo">
-                    eto sobshenie uje udaleno esli xotite ego saxranit copiruyte ego prejde chem viyti iz okna
-                    @if($show_message->content == null)
-                        eto sobshenie uje udaleno
+                    @if(isset($link))
+                        @if($link->reading != null)
+                            eto sobshenie budet udaleno cherez {{$link->reading}} vremeni esli eto sobshenie vajna prosim saxranit ego gdeto esho prejde udalenie
+                        @else
+                            eto sobshenie uje udalena esli ona vajna prosim skopiruyte ego prejde chem viyti iz okna
+                        @endif
                     @endif
+                    @if(isset($show_message))
+                            @if($show_message->reading != null)
+                            eto sobshenie budet udaleno cherez {{$show_message->reading}} vremeni esli eto sobshenie vajna prosim saxranit ego gdeto esho prejde udalenie
+                            @else
+                                eto sobshenie uje udalena esli ona vajna prosim skopiruyte ego prejde chem viyti iz okna
+                            @endif
+                    @endif
+
                 </h1>
             </div>
             <div style="margin-bottom:30px;color: #B3B3B3;width: 820px;height: 150px;background: #1A222C8F;border-radius: 5px;display: block;padding: 12px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;">
-                <p>{{$show_message->content}}</p>
+                @if(isset($link))
+                    <p>{{$link->content}}</p>
+                @endif
+                @if(isset($show_message))
+                    <p>{{$show_message->content}}</p>
+                @endif
             </div>
         </div>
         <div>
-
         </div>
     </div>
 @endsection

@@ -164,7 +164,7 @@ margin-left: 30px;
                     </div>
                     <div>
                         <p class="texth1" style="">Secret Password</p>
-                        <input class="btnDel" type="password" id="password" name="password" placeholder="|" >
+                        <input class="btnDel" type="password" id="password" name="password" placeholder="|" value="">
                     </div>
                     <div>
                         <p class="texth1">Note link name (optional)</p>
@@ -184,9 +184,6 @@ margin-left: 30px;
         function input1(){
            let password = document.getElementById('#password').val();
            let email = document.getElementById('#email').val();
-           if (password != ' '){
-               alert('Nopishite i svoy' + email +'toje')
-           }
         }
         document.getElementById('add').addEventListener('click', function (e) {
             let div = document.getElementById('text');

@@ -13,7 +13,7 @@
     <style>
         @yield('css')
     body {
-        background-image: url(../../image/Mask.png);
+        background-image: url({{asset('../../image/Mask.png')}});
     }
     .font{
         color: #FFF;
@@ -38,7 +38,7 @@
     justify-content: center;">
             <div style="display: flex;align-items: center;justify-content: space-between">
                 <div style="margin-left: 100px;width: 530px;height: 55px;display:flex;align-items: center;justify-content: center">
-                    <div><a href="{{route('SmsLinks')}}"><img src="../../image/Group.png" alt="" ></a></div>
+                    <div><a href="{{route('SmsLinks')}}"><img src="{{asset('../../image/Group.png')}}" alt="" ></a></div>
                 <div style="display: flex;align-items: center;justify-content: flex-start;"><p style="width: 190px;height: 55px;color: #FFFFFF;font-family: Inter;font-size: 12px;font-weight: 300;line-height: 15px;letter-spacing: 0em;text-align: left;display: flex;align-items: flex-end;margin-left: 25px;">Send notes that will self destruct after being read.</p></div>
                 </div>
                 <div style="margin-right: 100px;width: 120px;height: 35px;display: flex;align-items: center;justify-content: center;">
@@ -57,7 +57,7 @@
         <div style="max-width: 1440px;min-height: 180px;width: 100%;height: auto;background: #466A93;">
             <div style="display: flex;align-items: center;justify-content: space-between">
                 <div style="width: 100%;display: flex;align-items: center;justify-content: center;margin-top: 25px;margin-bottom: 25px;">
-                    <div><img style="width: 145px;height: 35px;" src="../../image/Group.png" alt="" ></div>
+                    <div><img style="width: 145px;height: 35px;" src="{{asset('../../image/Group.png')}}" alt="" ></div>
                 </div>
             </div>
             <div style="width: 100%;display: flex;align-items: center;justify-content: center;">
@@ -81,8 +81,8 @@
                        <h1 style="cursor: default" class="font">Social Media</h1>
                        <div>
                            <div style="display: flex;align-items: center;justify-content: space-evenly;">
-                               <a href="#"><img src="../../image/FaceBook.png" alt=""></a>
-                               <a href="#"><img src="../../image/Twitter.png" alt=""></a>
+                               <a href="#"><img src="{{asset('../../image/FaceBook.png')}}" alt=""></a>
+                               <a href="#"><img src="{{asset('../../image/Twitter.png')}}" alt=""></a>
                            </div>
                        </div>
                    </div>

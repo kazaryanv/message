@@ -69,29 +69,52 @@ class LinkGenerateController extends Controller
         }
         return view('show_message',compact('show_message'));
     }
-    public function login()
-    {
-        return view('login');
-    }
 
-    public function login_store(Request $request){
-        $user_data = $request->only('password');
-        if(Auth::attempt($user_data)) {
-            return redirect()->route('show_message');
-        } else {
-            return abort(404);
+    public function link_name($link_name){
+    $link = LinkGenerate::query()->where('id' , '=', $link_name)->orWhere('link_name',$link_name)->firstOrFail();
+    try{
+        if ($link->reading != null)
+            LinkGenerate::query()->where('created_at', '<', Carbon::now()->subHours($link->reading))->delete($link);
+        else{
+        $link->delete();
         }
+    }catch (Throwable  $e){
     }
+    return view('show_message', compact('link'));
 
+    }
 
 
     public function destroy($id){
         $links = LinkGenerate::query()->findOrFail($id);
         $link_delete = $links->delete();
         if ($link_delete)
-        return redirect()->route('show_link')->with("success",'your message is dellete');
+            return redirect()->route('show_link')->with("success",'your message is dellete');
         else{
             return redirect()->route('show_link')->with('fail','fail');
         }
     }
+//
+//
+//
+//    public function login()
+//    {
+//        return view('login');
+//    }
+//
+//
+//
+//    public function login_store(Request $request){
+//        $user_data = $request->only('password');
+//        dd(Auth::attempt($user_data));
+//        if(Auth::attempt($user_data)) {
+//            return redirect()->route('show_message');
+//        } else {
+//            return abort(404);
+//        }
+//    }
+//
+//
+
+
 }

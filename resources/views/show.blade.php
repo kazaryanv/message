@@ -111,7 +111,7 @@ color:#FFFFFF;
         </div>
         <div>
             @if(isset($links))
-                <textarea name="" id="" cols="30" rows="10" class="js-copytextarea" style="    width: 816px;height: 83px;border-radius: 4px 4px 0px 0px;background: #DDE5EB;display: flex;align-items: center;justify-content: flex-start;text-align: start;padding-top: 30px;padding-left: 30px;">{{route('show_link')}}{{'/message/'.$links->id}}</textarea>
+                <textarea name="" id="" cols="30" rows="10" class="js-copytextarea" style="    width: 816px;height: 83px;border-radius: 4px 4px 0px 0px;background: #DDE5EB;display: flex;align-items: center;justify-content: flex-start;text-align: start;padding-top: 30px;padding-left: 30px;">@if($links->link_name != null){{route('show_link')}}{{'/message/link_name/'.$links->link_name}}@else{{route('show_link')}}{{'/message/'.$links->id}}@endif</textarea>
                 <p style="width: 816px;height: 41px;border-radius: 0px 0px 4px 4px;background: #B2C3CF;padding-left: 30px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;display: flex;align-items: center;justify-content: flex-start;">
                     The note will self-destruct after reading it.
                 </p>
@@ -121,7 +121,7 @@ color:#FFFFFF;
                             <input  id="js-textareacopybtn" class="btnShow" type="button" value="Select link" style="margin-right:30px;">
                             <input class="btnShow" type="button" value="E-mail" id="ShowOption"/>
                         </div>
-                        <form action="{{route('destroy',$links->id)}}">
+                        <form action="@if($links->link_name != null){{route('destroy',$links->link_name)}}@else {{route('destroy',$links->id)}}@endif">
                             <div>
                                 <div>
                                     <input style="width: 290px;height: 55px;" class="btnShow" type="submit" value="Destroy note now"/>
