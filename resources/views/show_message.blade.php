@@ -43,14 +43,14 @@
                 <h1 class="memo">
                     @if(isset($link))
                         @if($link->reading != null)
-                            eto sobshenie budet udaleno cherez {{$link->reading}} vremeni esli eto sobshenie vajna prosim saxranit ego gdeto esho prejde udalenie
+                            eto sobshenie budet udaleno cherez {{$link->reading}} chesa esli eto sobshenie vajna prosim saxranit ego gdeto esho prejde udalenie
                         @else
                             eto sobshenie uje udalena esli ona vajna prosim skopiruyte ego prejde chem viyti iz okna
                         @endif
                     @endif
                     @if(isset($show_message))
                             @if($show_message->reading != null)
-                            eto sobshenie budet udaleno cherez {{$show_message->reading}} vremeni esli eto sobshenie vajna prosim saxranit ego gdeto esho prejde udalenie
+                            eto sobshenie budet udaleno cherez {{$show_message->reading}} chesa esli eto sobshenie vajna prosim saxranit ego gdeto esho prejde udalenie
                             @else
                                 eto sobshenie uje udalena esli ona vajna prosim skopiruyte ego prejde chem viyti iz okna
                             @endif

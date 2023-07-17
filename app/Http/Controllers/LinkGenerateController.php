@@ -2,24 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\SendMail;
 use App\Models\LinkGenerate;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Route;
-use function Illuminate\Session\userAgent;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
-use Symfony\Component\Console\Input\Input;
-use function Symfony\Component\Mime\cc;
+
 use Throwable;
 
 class LinkGenerateController extends Controller
 {
     public function index(){
-        $links = LinkGenerate::all();
-        return view("SmsLinks",compact('links'));
+        return view("SmsLinks");
     }
 
     public function create(Request $request){
@@ -89,9 +82,9 @@ class LinkGenerateController extends Controller
         $links = LinkGenerate::query()->findOrFail($id);
         $link_delete = $links->delete();
         if ($link_delete)
-            return redirect()->route('show_link')->with("success",'your message is dellete');
+            return redirect()->route('SmsLinks')->with("success",'your message is dellete');
         else{
-            return redirect()->route('show_link')->with('fail','fail');
+            return redirect()->route('SmsLinks')->with('fail','fail');
         }
     }
 //

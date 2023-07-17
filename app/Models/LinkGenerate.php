@@ -1,16 +1,13 @@
 <?php
 
 namespace App\Models;
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\LinkGenerate as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
-class LinkGenerate extends Authenticatable
+class LinkGenerate extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
+    use HasFactory;
     protected $fillable = [
         'content',
         'reading',
@@ -20,5 +17,4 @@ class LinkGenerate extends Authenticatable
         'created_at',
         'updated_at',
     ];
-
 }
