@@ -51,7 +51,7 @@
             <div style="display: flex;align-items: center;justify-content: space-between">
                 <div style="margin-left: 100px;width: 530px;height: 55px;display:flex;align-items: center;justify-content: center">
                     <div><a href="{{route('SmsLinks')}}"><img src="{{asset('../../image/Group.png')}}" alt="" ></a></div>
-                <div style="display: flex;align-items: center;justify-content: flex-start;"><p style="width: 190px;height: 45px;color: #FFFFFF;font-family: Inter;font-size: 12px;font-weight: 300;line-height: 15px;letter-spacing: 0em;text-align: left;display: flex;align-items: flex-end;margin-left: 25px;margin-bottom: unset">Send notes that will self destruct after being read.</p></div>
+                <div style="display: flex;align-items: center;justify-content: flex-start;"><p style="width: 190px;height: 45px;color: #FFFFFF;cursor:default;font-family: Inter;font-size: 12px;font-weight: 300;line-height: 15px;letter-spacing: 0em;text-align: left;display: flex;align-items: flex-end;margin-left: 25px;margin-bottom: unset">Send notes that will self destruct after being read.</p></div>
                 </div>
                 <div class="divIn" style="margin-right: 100px;width: 120px;height: 35px;display: flex;align-items: center;justify-content: center;">
                     <select class="form-select" name="" id="" style="background-position: calc(100% - 5px) center;padding-left: 10px;width: 100%;height: 100%;cursor: default;border-radius: 5px;outline: none;">

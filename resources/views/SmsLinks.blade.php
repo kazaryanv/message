@@ -237,7 +237,7 @@ padding-bottom: 15px;
         <div style="max-width: 1440px;min-height: 765px; width: 100%;height: auto;">
             <div>
                 <div style="width: 100%;height: auto;display: flex;align-items: center;justify-content: space-around;margin-top: 105px;">
-                    <h1 class="memo">New Memo</h1>
+                    <h1 class="memo" style="cursor:default;">New Memo</h1>
                     <div style="width: 55px;height: auto;display: flex;align-items: center;justify-content: flex-end;">
                         <button type="button" id="add" class="interrogative">
                             <img style="width: 12px;height: 20px;" src="../../image/shape.png" alt="">
@@ -246,7 +246,7 @@ padding-bottom: 15px;
                 </div>
             </div>
          <div style="width: 100%;display: flex;align-items: center;justify-content: center;margin-bottom: 20px;">
-                 <div id="text" style="color: #B3B3B3;width: 820px;height: 150px;background: #1A222C8F;border-radius: 5px;display: none;padding: 12px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;">
+                 <div id="text" style="cursor:default;color: #B3B3B3;width: 820px;height: 150px;background: #1A222C8F;border-radius: 5px;display: none;padding: 12px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;">
                      With Privnote, you can send notes that self-destruct after being read.<br>
                      1. Write a note below, encrypt it and get a link.<br>
                      2. Send the link to whoever needs to read the note.<br>
@@ -318,7 +318,7 @@ padding-bottom: 15px;
             <div style="max-width: 1440px;width: 100%;height: auto;display: flex;align-items: center;justify-content: center;"><div style="width: 870px;height: 1px;background: #E5E5E5;"></div></div>
             <div style="max-width: 1440px;width: 100%;height: auto;display: flex;align-items: center;justify-content: center;margin-top: 25px;">
                 <div>
-                    <p style="font-family: 'Montserrat', sans-serif;font-size: 16px;font-weight: 600;line-height: 20px;letter-spacing: 0em;text-align: left;color: #FFFFFF;margin: unset">This is a free online service - the only way that you can show . is by sharing us on </p>
+                    <p style="cursor:default;font-family: 'Montserrat', sans-serif;font-size: 16px;font-weight: 600;line-height: 20px;letter-spacing: 0em;text-align: left;color: #FFFFFF;margin: unset">This is a free online service - the only way that you can show . is by sharing us on </p>
                 </div>
                 <div style="margin-left: 5px;">
                     <img src="{{asset('../../image/H1img.png')}}" alt="">
@@ -337,8 +337,8 @@ padding-bottom: 15px;
             <div style="width: 100%;display: flex;align-items: center;justify-content: center;margin-bottom: 100px;">
                 <div style="    color: #B3B3B3;max-width: 1240px;width: 100%;height: 434px;background: #1A222C8F;border-radius: 5px;display: block;padding: 12px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;">
                     <div>
-                            <h1 style="margin-bottom: 35px;margin-top: 60px;font-family: Inter;font-size: 24px;font-weight: 400;line-height: 29px;letter-spacing: 0em;text-align: center;color: #FFFFFF;">Use safe note whenever you share your personal and sensitive information via the internet.</h1>
-                            <p style="font-family: Inter;font-size: 16px;font-weight: 400;line-height: 24px;letter-spacing: 0em;text-align: center;margin: 0px 93px 70px 93px;">Notes Online  is the free, fast, and secure way to share files and notes with end-to-end encryption and a link that expires
+                            <h1 style="cursor:default;margin-bottom: 35px;margin-top: 60px;font-family: Inter;font-size: 24px;font-weight: 400;line-height: 29px;letter-spacing: 0em;text-align: center;color: #FFFFFF;">Use safe note whenever you share your personal and sensitive information via the internet.</h1>
+                            <p style="cursor:default;font-family: Inter;font-size: 16px;font-weight: 400;line-height: 24px;letter-spacing: 0em;text-align: center;margin: 0px 93px 70px 93px;">Notes Online  is the free, fast, and secure way to share files and notes with end-to-end encryption and a link that expires
                                 <br>automatically. And also it's a free cloud-based service that is functioning via an encrypted SSL tunnel. Safenote
                                 <br>doesn't require you to create an account before start using the service and no password or email required. This free service enables you to
                                 <br>send a self-destructing message or file to someone. This means once they view the message or download the file,
@@ -353,81 +353,86 @@ padding-bottom: 15px;
             </div>
             <div style="width: 100%;height: auto;display:flex;align-items: center;justify-content: center;margin-bottom: 200px;">
                 <div style="width: 100%;max-width: 1265px;height: auto;display:flex;align-items: center;justify-content: space-between;">
-                    <div class="arrow" style="width: 394px;height: auto;border-radius: 4px;background: #1A222C80">
-                        <div style="    display: flex;align-items: center;justify-content: center;margin-top: 25px;">
-                            <img src="{{asset('../../image/FileUpload.png')}}" alt="">
-                        </div>
-                        <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
-                            <div>
-                                <h1 style="color:#FFFFFF;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29px;letter-spacing: 0em;text-align: left;">Upload File</h1>
+                    <a href="#">
+                        <div class="arrow" style="width: 394px;height: auto;border-radius: 4px;background: #1A222C80">
+                            <div style="    display: flex;align-items: center;justify-content: center;margin-top: 25px;">
+                                <img src="{{asset('../../image/FileUpload.png')}}" alt="">
                             </div>
-                            <div style="width: 300px;height: 160px;">
-                                <p style="font-family: Montserrat;color:#FFFFFF;font-size: 15px;font-weight: 400;line-height: 18px;letter-spacing: 0em;text-align: center;">But I must explain to you how all this
-                                    mistaken idea of denouncing pleasure
-                                    and praising pain was born and I will
-                                    give you a complete account of the
-                                    system, and expound the actual
-                                    teachings of the great explorer of
-                                    the truth, the master-builder of human
-                                    happiness.
-                                </p>
-                            </div>
-                            <div class="linker">
-                                <img src="{{asset('../../image/linker.png')}}" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="arrow" style="width: 394px;height: auto;border-radius: 4px;background: #1A222C80">
-                        <div style="    display: flex;align-items: center;justify-content: center;margin-top: 25px;">
-                            <img src="{{asset('../../image/PrivateLink.png')}}" alt="">
-                        </div>
-                        <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
-                            <div>
-                                <h1 style="color:#FFFFFF;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29px;letter-spacing: 0em;text-align: left;">Private Link</h1>
-                            </div>
-                            <div style="width: 300px;height: 160px;">
-                                <p style="font-family: Montserrat;color:#FFFFFF;font-size: 15px;font-weight: 400;line-height: 18px;letter-spacing: 0em;text-align: center;">But I must explain to you how all this
-                                    But I must explain to you how all this
-                                    mistaken idea of denouncing pleasure
-                                    and praising pain was born and I will
-                                    give you a complete account of the
-                                    system, and expound the actual
-                                    teachings of the great explorer of
-                                    the truth, the master-builder of human
-                                    happiness.
-                                </p>
-                            </div>
-                            <div class="linker">
-                                <img src="{{asset('../../image/linkerspitak.png')}}" alt="">
+                            <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+                                <div>
+                                    <h1 style="color:#FFFFFF;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29px;letter-spacing: 0em;text-align: left;">Upload File</h1>
+                                </div>
+                                <div style="width: 300px;height: 160px;">
+                                    <p style="font-family: Montserrat;color:#FFFFFF;font-size: 15px;font-weight: 400;line-height: 18px;letter-spacing: 0em;text-align: center;">But I must explain to you how all this
+                                        mistaken idea of denouncing pleasure
+                                        and praising pain was born and I will
+                                        give you a complete account of the
+                                        system, and expound the actual
+                                        teachings of the great explorer of
+                                        the truth, the master-builder of human
+                                        happiness.
+                                    </p>
+                                </div>
+                                <div class="linker">
+                                    <img src="{{asset('../../image/linker.png')}}" alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="arrow" style="width: 394px;height: auto;border-radius: 4px;background: #1A222C80">
-                        <div style="    display: flex;align-items: center;justify-content: center;margin-top: 25px;">
-                            <img src="{{asset('../../image/SecureEmail.png')}}" alt="">
+                    </a>
+                    <a href="http://127.0.0.1:8000/show">
+                        <div class="arrow" style="width: 394px;height: auto;border-radius: 4px;background: #1A222C80">
+                            <div style="    display: flex;align-items: center;justify-content: center;margin-top: 25px;">
+                                <img src="{{asset('../../image/PrivateLink.png')}}" alt="">
+                            </div>
+                            <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+                                <div>
+                                    <h1 style="color:#FFFFFF;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29px;letter-spacing: 0em;text-align: left;">Private Link</h1>
+                                </div>
+                                <div style="width: 300px;height: 160px;">
+                                    <p style="font-family: Montserrat;color:#FFFFFF;font-size: 15px;font-weight: 400;line-height: 18px;letter-spacing: 0em;text-align: center;">But I must explain to you how all this
+                                        But I must explain to you how all this
+                                        mistaken idea of denouncing pleasure
+                                        and praising pain was born and I will
+                                        give you a complete account of the
+                                        system, and expound the actual
+                                        teachings of the great explorer of
+                                        the truth, the master-builder of human
+                                        happiness.
+                                    </p>
+                                </div>
+                                <div class="linker">
+                                    <img src="{{asset('../../image/linkerspitak.png')}}" alt="">
+                                </div>
+                            </div>
                         </div>
-                        <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
-                            <div>
-                                <h1 style="color:#FFFFFF;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29px;letter-spacing: 0em;text-align: left;">Secure Email</h1>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlFDTztlNCVlKKgXMrLBqDDNCNzNhZgdJhBNPBtxHzqFFVLXQmVCZDntHbXKGdnxtLZXpg">
+                        <div class="arrow" style="width: 394px;height: auto;border-radius: 4px;background: #1A222C80">
+                            <div style="    display: flex;align-items: center;justify-content: center;margin-top: 25px;">
+                                <img src="{{asset('../../image/SecureEmail.png')}}" alt="">
                             </div>
-                            <div style="width: 300px;height: 160px;">
-                                <p style="font-family: Montserrat;color:#FFFFFF;font-size: 15px;font-weight: 400;line-height: 18px;letter-spacing: 0em;text-align: center;">But I must explain to you how all this
-                                    But I must explain to you how all this
-                                    mistaken idea of denouncing pleasure
-                                    and praising pain was born and I will
-                                    give you a complete account of the
-                                    system, and expound the actual
-                                    teachings of the great explorer of
-                                    the truth, the master-builder of human
-                                    happiness.
-                                </p>
-                            </div>
-                            <div class="linker">
-                                <img  src="{{asset('../../image/linker.png')}}" alt="">
+                            <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+                                <div>
+                                    <h1 style="color:#FFFFFF;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29px;letter-spacing: 0em;text-align: left;">Secure Email</h1>
+                                </div>
+                                <div style="width: 300px;height: 160px;">
+                                    <p style="font-family: Montserrat;color:#FFFFFF;font-size: 15px;font-weight: 400;line-height: 18px;letter-spacing: 0em;text-align: center;">But I must explain to you how all this
+                                        But I must explain to you how all this
+                                        mistaken idea of denouncing pleasure
+                                        and praising pain was born and I will
+                                        give you a complete account of the
+                                        system, and expound the actual
+                                        teachings of the great explorer of
+                                        the truth, the master-builder of human
+                                        happiness.
+                                    </p>
+                                </div>
+                                <div class="linker">
+                                    <img  src="{{asset('../../image/linker.png')}}" alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

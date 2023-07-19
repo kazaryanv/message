@@ -115,7 +115,7 @@ color: #4D4D4D;
     height: auto;">
             <div>
                 <div style="width: 100%;height: auto;display: flex;align-items: center;justify-content: space-between;">
-                    <h1 class="memo">New Memo</h1>
+                    <h1 class="memo" style="cursor: default">Note link ready</h1>
                     <div style="width: 55px;height: auto;display: flex;align-items: center;justify-content: flex-end;">
                         <button type="button" id="add" class="interrogative" style="cursor: pointer;">
                             <img style="width: 12px;height: 20px;" src="../../image/shape.png" alt="">
@@ -124,7 +124,7 @@ color: #4D4D4D;
                 </div>
             </div>
             <div style="width: 100%;display: flex;align-items: center;justify-content: center;margin-bottom: 20px;">
-                <div id="text" style="color: #B3B3B3;width: 820px;height: 150px;background: #1A222C8F;border-radius: 5px;display: none;padding: 12px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;">
+                <div id="text" style="cursor:default;color: #B3B3B3;width: 820px;height: 150px;background: #1A222C8F;border-radius: 5px;display: none;padding: 12px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;">
                     With Privnote, you can send notes that self-destruct after being read.<br>
                     1. Write a note below, encrypt it and get a link.<br>
                     2. Send the link to whoever needs to read the note.<br>
@@ -140,8 +140,8 @@ color: #4D4D4D;
         </div>
         <div>
             @if(isset($links))
-                <textarea name="" id="" cols="30" rows="10" class="js-copytextarea" readonly>@if($links->link_name != null){{route('show_link')}}{{'/message/link_name/'.$links->link_name}}@else{{route('show_link')}}{{'/message/'.$links->id}}@endif</textarea>
-                <p style="height: 41px;border-radius: 0px 0px 4px 4px;background: #B2C3CF;padding-left: 30px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;display: flex;align-items: center;justify-content: flex-start;margin: unset">
+                <textarea style="outline: unset;cursor: default" name="" id="" cols="30" rows="10" class="js-copytextarea" readonly>@if($links->link_name != null){{route('show_link')}}{{'/message/link_name/'.$links->link_name}}@else{{route('show_link')}}{{'/message/'.$links->id}}@endif</textarea>
+                <p style="height: 41px;cursor:default;border-radius: 0px 0px 4px 4px;background: #B2C3CF;padding-left: 30px;font-family: Inter;font-size: 14px;font-weight: 400;line-height: 17px;letter-spacing: 0em;text-align: left;display: flex;align-items: center;justify-content: flex-start;margin: unset">
                     The note will self-destruct after reading it.
                 </p>
 
