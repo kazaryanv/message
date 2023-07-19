@@ -72,6 +72,7 @@ class LinkGenerateController extends Controller
         $link->delete();
         }
     }catch (Throwable  $e){
+
     }
     return view('show_message', compact('link'));
 
@@ -87,27 +88,19 @@ class LinkGenerateController extends Controller
             return redirect()->route('SmsLinks')->with('fail','fail');
         }
     }
-//
-//
-//
-//    public function login()
-//    {
-//        return view('login');
-//    }
-//
-//
-//
-//    public function login_store(Request $request){
-//        $user_data = $request->only('password');
-//        dd(Auth::attempt($user_data));
-//        if(Auth::attempt($user_data)) {
-//            return redirect()->route('show_message');
-//        } else {
-//            return abort(404);
-//        }
-//    }
-//
-//
 
 
+
+    public function destroyNowid($id)
+    {
+       $link =  LinkGenerate::query()->where($id == 'id');
+        return view('delete_not_now',compact('link'));
+    }
+
+    public function destroyNow()
+    {
+        $link = LinkGenerate::query()->first();
+        dd($link);
+        return route('/show/message/link/{link_name}');
+    }
 }

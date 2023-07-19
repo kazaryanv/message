@@ -15,16 +15,14 @@
     background: #1A222C;
     }
     .memo{
-    width: 100%;
-    font-family: Montserrat Thin;
+    width: 355px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: 600;
     line-height: 37px;
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-    padding-left: 20px;
-    margin-bottom: 20px;
     }
 @endsection
 @section('content')
@@ -42,18 +40,10 @@
             <div style="width: 100%;height: auto;display: flex;align-items: center;justify-content: space-between;margin-bottom: 20px;">
                 <h1 class="memo">
                     @if(isset($link))
-                        @if($link->reading != null)
-                            eto sobshenie budet udaleno cherez {{$link->reading}} chesa esli eto sobshenie vajna prosim saxranit ego gdeto esho prejde udalenie
-                        @else
-                            eto sobshenie uje udalena esli ona vajna prosim skopiruyte ego prejde chem viyti iz okna
-                        @endif
+                        Trouble Encountered
                     @endif
                     @if(isset($show_message))
-                            @if($show_message->reading != null)
-                            eto sobshenie budet udaleno cherez {{$show_message->reading}} chesa esli eto sobshenie vajna prosim saxranit ego gdeto esho prejde udalenie
-                            @else
-                                eto sobshenie uje udalena esli ona vajna prosim skopiruyte ego prejde chem viyti iz okna
-                            @endif
+                            Trouble Encountered
                     @endif
 
                 </h1>
